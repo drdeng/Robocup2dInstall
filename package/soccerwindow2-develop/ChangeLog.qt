@@ -1,0 +1,226 @@
+2006-11-30  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/model/main_data.h:
+	* src/model/main_data.cpp:
+	- removed DrawConfig instance.
+
+	* src/qt/draw_config.h:
+	- changed to the singleton object.
+
+	* soccerwindow2.pro:
+	- added.
+
+	* src/Makefile.am:
+	* src/src.pro:
+	* src/model/Makefile.am:
+	* src/model/model.pro:
+	* src/model/*.{h,cpp}:
+	* src/qt/Makefile.am:
+	* src/qt/qt.pro:
+	* src/qt/*.{h,cpp}:
+	- created subdirectries to split the views and model..
+
+2006-11-29  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* bootstrap:
+	* configure.ac:
+	* Makefile.am:
+	* src/Makefile.am:
+	- supported GNU Autotools for Qt4 with pkg-config
+
+	* src/field_canvas.cpp:
+	- fixed popup menu control.
+
+2006-11-28  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/mouse_state.h::
+	* src/field_canvas.cpp:
+	- added menu_failed property to MouseState to control the popup
+	menu status.
+
+2006-11-27  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/image_save_dialog.cpp:
+	(saveImage):
+	- fixed a defect of uncontrollable widgets in the tight loop.
+
+	* src/image_save_dialog.ch:
+	* src/image_save_dialog.cpp:
+	* src/debug_painter.h:
+	* src/debug_painter.cpp:
+	* src/player_control_painter.h:
+	* src/player_control_painter.cpp:
+	* src/voronoi_diagram_painter.h:
+	* src/voronoi_diagram_painter.cpp:
+	- ported from wxGTK to Qt.
+
+	* src/main_window.cpp:
+	- implemented start/kill server operation using std::system.
+	- implemented strict action usability check.
+	- Now, QCoreApplication::instance()->quit() is called in
+	closeEvent().
+
+	* src/debug_message_window.h:
+	* src/debug_message_window.cpp:
+	* src/debug_log_data.h:
+	* src/debug_log_data.cpp:
+	* src/debug_log_holder.h:
+	* src/debug_log_holder.cpp:
+	- ported from wxGTK to Qt.
+
+2006-11-26  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main_window.cpp:
+	- implemented savRCG() operation.
+
+	* src/player_type_table.h:
+	* src/player_type_table.cpp:
+	- removed.
+
+	* src/player_type_dialog.h:
+	* src/player_type_dialog.cpp:
+	- ported from wxGTK to Qt. renamed PlayerTypeGrid to PlayerTypeDialog.
+
+2006-11-25  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/detail_dialog.h:
+	* src/detail_dialog.cpp:
+	* src/ball_panel.h:
+	* src/ball_panel.cpp:
+	* src/player_panel.h:
+	* src/player_panel.cpp:
+	- ported from wxGTK to Qt.
+	- removed BallPanel and PlayerPanel.
+
+
+2006-11-24  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/field_canvas.cpp:
+	- added missing anti aliasing setting.
+
+	* src/view_config_dialog.cpp:
+	- set field scale range with ViewConfig static member.
+
+2006-11-23  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/monitor_client.cpp:
+	- fixed a port number for bind(). Now, QIODevice::readyRead()
+	works fine..
+
+	* src/field_painter.h:
+	* src/field_painter.cpp:
+	- created a QPixmap cache as a member.
+
+2006-11-22  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main_window.h:
+	* src/main_window.cpp:
+	- implemented basic monitor client operations.
+
+	* src/monitor_client.h:
+	* src/monitor_client.cpp:
+	- porting to Qt with QUdpSocket. not completed yet.
+	- implemented QSocketNotifier, but multiple notifier error occured.
+
+2006-11-21  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/view_config_dialog.h:
+	* src/view_config_dialog.cpp:
+	- changed player selection method to a combo box.
+	- finished to implement event handlers.
+
+	* src/ball_trace_painter.h:
+	* src/ball_trace_painter.cpp:
+	* src/player_trace_painter.h:
+	* src/player_trace_painter.cpp:
+	- ported from wxGTK to Qt.
+
+2006-11-20  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/view_config_dialog.h:
+	* src/view_config_dialog.cpp:
+	- finished all layout.
+	- started to implement event handlers.
+
+2006-11-19  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/field_canvas.h:
+	* src/field_canvas.cpp:
+	- trying to speed up the drawing operations. but not solved yet.
+
+	* src/score_board_painter.h:
+	* src/score_board_painter.cpp:
+	- ported from wxGTK to Qt.
+
+2006-11-18  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/ball_painter.h:
+	* src/ball_painter.cpp:
+	* src/painter_interface.h:
+	* src/player_painter.h:
+	* src/player_painter.cpp:
+	- ported from wxGTK to Qt.
+
+	* src/dir_selector.h:
+	* src/dir_selector.cpp:
+	- implemented original directory selector dialog.
+
+	* src/main_window.h:
+	* src/main_window.cpp:
+	- added file open operations.
+
+	* src/ball.h:
+	* src/ball.cpp:
+	* src/debug_client_parser.h:
+	* src/debug_client_parser.cpp:
+	* src/debug_view_data.h:
+	* src/debug_view_data.cpp:
+	* src/main_data.h:
+	* src/main_data.cpp:
+	* src/monitor_view_data.h:
+	* src/monitor_view_data.cpp:
+	* src/player.h:
+	* src/player.cpp:
+	* src/team.h:
+	* src/team.cpp:
+	* src/view_holder.h:
+	* src/view_holder.cpp:
+	- copied from wx version.
+
+2006-11-16  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/field_painter.h:
+	* src/field_painter.cpp:
+	- ported from wxGTK to Qt.
+
+2006-11-15  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/app_config.h:
+	* src/app_config.cpp:
+	* src/gdi_config.h:
+	* src/gdi_config.cpp:
+	* src/view_config.h:
+	* src/view_config.cpp:
+	- ported from wxGTK to Qt.
+	- implemented configuration Read/Write.
+
+	* src/log_player.h:
+	* src/log_player.cpp:
+	- ported from wxGTK to Qt.
+	- implemented basic lob player framework.
+
+	* src/log_player_tool_bar.h:
+	* src/log_player_tool_bar.cpp:
+	- implemented log player control tool bar as a main tool bar.
+
+2006-11-14  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main.cpp:
+	* src/main_window.h:
+	* src/main_window.cpp:
+	* src/field_canvas.h:
+	* src/field_canvas.cpp:
+	- started to implement Qt version.
+	- created main window.
+	- added menus.
+	- testing...

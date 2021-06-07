@@ -1,0 +1,1122 @@
+2019-05-16  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/formation_converter.cpp:
+	* tool/Makefile.am:
+	- フォーメーションファイルを旧版からCSV版へ変換するコマンドを追加
+
+2019-05-07  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main_window.cpp:
+	- FormationDT以外を無効化
+
+2019-05-02  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* m4/ax_boost_system.m4:
+	* m4/ax_cxx_compile_stdcxx.m4:
+	* m4/ax_cxx_compile_stdcxx_14.m4:
+	* configure.ac:
+	* m4/ax_boost_base.m4:
+	* m4/qt.m4:
+	* src/Makefile.am:
+	* src/command.cpp:
+	* src/config_dialog.cpp:
+	* src/constraint_delegate.cpp:
+	* src/constraint_edit_dialog.cpp:
+	* src/constraint_view.cpp:
+	* src/coordinate_delegate.cpp:
+	* src/edit_canvas.cpp:
+	* src/edit_dialog.cpp:
+	* src/main.cpp:
+	* src/main_window.cpp:
+	* src/sample_view.cpp:
+	* tool/average_formation.cpp:
+	* tool/dttrainer/trainer.cpp:
+	* tool/dttrainer/trainer.h:
+	- Qt5に対応
+	- C++14に対応
+
+2017-06-23  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* m4/qt4.m4:
+	- Ubuntu16.04でのエラーに対応
+
+2016-06-13  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* Makefile.am:
+	* configure.ac:
+	- 存在しないファイルをターゲットから削除
+	- 暫定バージョン番号として日付を設定
+
+2016-05-28  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/dttrainer/main.cpp:
+	* tool/dttrainer/trainer.cpp:
+	- 配列のインデックス誤りのバグを修正
+
+	* tool/dttrainer/main.cpp:
+	- ファイル入出力処理を追加
+
+	* tool/dttrainer/trainer.cpp:
+	* tool/dttrainer/trainer.h:
+	- 学習のループと誤差値の判定を追加．未テスト
+
+2016-05-22  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/dttrainer/main.cpp:
+	* tool/dttrainer/trainer.cpp:
+	* tool/dttrainer/trainer.h:
+	- 三角形分割フォーメーションの学習機能と入出力をほぼ実装．
+
+2016-05-20  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/dttrainer/Makefile.am:
+	* tool/dttrainer/main.cpp:
+	* tool/dttrainer/memo:
+	* tool/dttrainer/trainer.cpp:
+	* tool/dttrainer/trainer.h:
+	* configure.ac:
+	* tool/Makefile.am:
+	- 三角形分割フォーメーションモデルを用いた学習プログラムを追加。実
+	装途中。
+
+	* m4/qt.m4:
+	- OSX環境での不具合に対応
+
+2015-07-18  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_data.cpp:
+	- 自動バックアップのファイル名書式を変更
+
+2015-07-10  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/average_formation.cpp:
+	- 平均フォーメーションにベースのRoleTypeとMarkerをセットしていなかっ
+	た不具合を修正
+
+2014-07-08  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/edit_dialog.cpp:
+	* src/edit_dialog.h:
+	- 編集ダイアログに役割タイプを設定するコンボボックスを追加
+
+2014-07-04  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/edit_dialog.cpp:
+	* src/edit_dialog.h:
+	- 編集ダイアログにマーク行動の割当を選択できるチェックボックスを追加
+
+2013-06-22  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/config_dialog.cpp:
+	* src/config_dialog.h:
+	* src/edit_canvas.cpp:
+	* src/main_window.cpp:
+	* src/options.cpp:
+	* src/options.h:
+	- フィールド描画のスケールをコンフィグダイアログ上で設定できるように機能追加
+
+2013-06-16  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/config_dialog.cpp:
+	* src/config_dialog.h:
+	* src/Makefile.am:
+	* src/edit_canvas.cpp:
+	* src/main.cpp:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/options.cpp:
+	* src/options.h:
+	- ConfigDialogを追加
+	- フィールドの表示サイズを指定できるように機能追加
+
+2013-05-25  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_data.cpp:
+	- Data Auto Selectをオフにした場合，X軸にボールが吸い付く機能もオ
+	フにするように変更
+
+	* src/edit_canvas.cpp:
+	- ゴールポストを追加
+
+	* src/edit_data.cpp:
+	- 自動バックアップのファイル名フォーマットを変更
+
+2012-06-05  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	- シュートコース表示用のゴール幅を-0.1
+
+	* src/main_window.cpp:
+	- シュートコース表とキーパー移動範囲の表示切り替えショートカットキー
+	を追加．シュートは's'，キーパーは'g'
+	- シンメトリーモードの切り替えショートカットキーを'm'へ変更
+
+	* src/edit_canvas.cpp:
+	- 拡大縮小操作時にフォーカス位置がずれていたバグを修正
+	- キーパーの移動範囲円周上にインデックス番号描画を追加
+	- シュートによるボール移動範囲の円弧を描画する機能を追加
+	- シュート目標X座標値をゴールライン-0.001に変更
+
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/options.cpp:
+	* src/options.h:
+	- ゴール隅へシュートを撃たれた場合のボールの移動予測位置表示機能を追加
+	- キーパーの移動範囲円表示機能を追加．初速と体の向きは考慮していない
+
+2012-06-03  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	- ファイルセーブ時に日時をコメントとしてファイル先頭に書き込む機能を追加
+
+2012-05-12  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	- autoconfマクロの宣言順の不備を修正
+
+2012-02-13  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main_window.cpp:
+	- 新規作成時のタイプ選択からKNNとCDTを削除
+
+2011-06-21  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/Makefile.am:
+	- average_formationをインストールターゲットに変更
+
+	* src/edit_canvas.cpp:
+	- 背面表示のフォーメーションデータのインデックス番号が0から始まる
+	ように変更
+
+2011-06-07  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	* src/sample_view.cpp:
+	- 表示されるデータのインデックスが0から始まるように変更
+
+2011-06-04  Tomoharu NAKASHIMA  <nakashi@cs.osakafu-u.ac.jp>
+
+	* tool/Makefile.am:
+	- typo の修正
+
+2011-05-31  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	- clangライブラリのチェックを追加
+
+2010-09-01  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* NEWS:
+	* README:
+	* configure.ac:
+	- Initial release 0.0.0.
+
+	* xpm/fedit2.xpm:
+	* mingw/rcsc.pro:
+	* xpm/soccerwindow2-nostr.xpm:
+	* xpm/soccerwindow2.xpm:
+	* Makefile.am:
+	* src/fedit2.ico:
+	* src/main_window.cpp:
+	* rcsc/rcsc.pro:
+	- Qt+MinGW環境用の.proファイルを配布物へ追加．
+	- アイコンを変更．
+
+2010-08-31  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* fedit2.pro:
+	* mingw:
+	* mingw/rcsc.pro:
+	* src/fedit2.ico:
+	* src/fedit2.rc:
+	* src/src.pro:
+	* Makefile.am:
+	* src/Makefile.am:
+	- MinGW環境でのビルド設定を追加．
+
+2010-08-30  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	- cppunitのチェックを削除
+
+2010-08-27  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* NEWS:
+	* README:
+	* configure.ac:
+	- initial release candidate.
+
+	* m4/ax_boost_base.m4:
+	- 最新のマクロに更新
+
+	* src/main_window.cpp:
+	- 実装されていないメニューを消去
+
+	* tool/average_formation.cpp:
+	- fixed typo
+
+2010-06-19  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	- バックグラウンドデータの三角形分割を参照しべきところを，通常デー
+	タの三角形分割を参照していたバグを修正した
+
+2010-06-02  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* tool/Makefile.am:
+	* tool/average_formation.cpp:
+	* Makefile.am:
+	* configure.ac:
+	* src/Makefile.am:
+	- 2つのフォーメーション設定ファイルから，平均値を取るフォーメーショ
+	ンを生成し，設定ファイルデータを出力するコマンドラインツールを追加
+	した
+
+	* src/edit_data.cpp:
+	- バックアップファイルの命名方法を変更し，タイムスタンプを末尾につ
+	けるようにした
+
+2010-01-29  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* INSTALL:
+	* configure.ac:
+	* m4/qt.m4:
+	* reconfig.sh:
+	- qt.m4を更新
+	- ibrcscのサーチパスを追加
+
+2009-09-14  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	* src/main.cpp:
+	- added keepaway field (not enabled by default)
+	- fixed copiright message.
+
+2009-08-07  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main.cpp:
+	- コピーライト出力を追加
+
+2009-06-17  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	- 古いcdtライブラリのヘッダインクルードを削除
+
+2009-05-19  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	- 三角形分割を新しいTriangulationライブラリを使って作り直した．
+
+2009-05-04  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/options.cpp:
+	* src/options.h:
+	- implemented background data painting mode.
+
+	* src/Makefile.am:
+	* src/constraint_delegate.cpp:
+	* src/constraint_delegate.h:
+	* src/constraint_delegate.h:
+	* src/constraint_view.cpp:
+	* src/constraint_view.h:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- added ConstraintDelegate class.
+	- implemented an action to replace constraints.
+
+2009-05-03  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/constraint_edit_dialog.cpp:
+	* src/constraint_view.cpp:
+	* src/coordinate_delegate.cpp:
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_dialog.cpp:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/sample_view.cpp:
+	- removed debug messages.
+	- added an action to invoke a constraint edit dialog.
+
+	* src/Makefile.am:
+	* src/constraint_view.cpp:
+	* src/constraint_view.h:
+	* src/model_view_test.cpp:
+	* src/constraint_view.cpp:
+	* src/constraint_view.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/model_view_test.cpp:
+	- added ConstraintView class.
+	- implemented an action to delete constraints.
+
+	* src/sample_view.cpp:
+	- fixed the incorrect slot name.
+
+	* src/Makefile.am:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/sample_view.cpp:
+	* src/sample_view.h:
+	- renamed TreeView to SampleView.
+	- removed the unnecessary root item.
+
+	* src/Makefile.am:
+	* src/constraint_edit_dialog.cpp:
+	* src/constraint_edit_dialog.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	* src/constraint_edit_dialog.cpp:
+	* src/constraint_edit_dialog.h:
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/edit_dialog.cpp:
+	* src/edit_dialog.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	- implemented constraint edge operations, not completed yet.
+
+2009-05-01  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/options.cpp:
+	* src/options.h:
+	- added constraint edit mode.
+	- implement selected vertex and candidate constraind edge
+	painting.
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	- replaced DelaunayTriangulation with cdt::Triangulation.
+
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	- added M_half_edges to store the final half edges.
+
+	* configure.ac:
+	* rcsc/Makefile.am:
+	* rcsc/formation/Makefile.am:
+	* rcsc/formation/formation_cdt.cpp:
+	* rcsc/formation/formation_cdt.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	* src/Makefile.am:
+	* src/main_window.cpp:
+	- added FormationCDT class.
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/edit_dialog.cpp:
+	* src/main_window.cpp:
+	* src/tree_view.cpp:
+	- followed the changes of librcsc.
+
+	* Makefile.am:
+	* configure.ac:
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/tree_view.cpp:
+	- supported changes of librcsc.
+
+2009-04-28  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/coordinate_delegate.cpp:
+	- added value difference checking.
+
+	* src/coordinate_delegate.h:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	- implemented coordinates value delegate operations.
+
+	* src/Makefile.am:
+	* src/coordinate_delegate.cpp:
+	* src/coordinate_delegate.h:
+	* src/coordinate_delegate.cpp:
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	- added CoordinateDelegate class.
+
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	- improved drag & drop operations.
+	- changed the policy of double click handling.
+
+2009-04-27  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	- implemented drag & drop item move action.
+
+	* qt4/edit_view.cpp:
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/options.cpp:
+	* src/options.h:
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	- added 'Show Triangulation' switch.
+	- added 'Show Circumcircle' switch.
+	- implemented containd area painting.
+	- implemented circumcircle painting.
+	- implemneted vertex index change as a context menu action.
+	- implemneted deletion as a context menu action.
+
+	* src/Makefile.am:
+	* src/tree_view.cpp:
+	* src/tree_view.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- disabled basic Model/View.
+	- added TreeView class as a subclass of TreeWidget.
+
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- disabled TableView and ListView.
+
+2009-04-24  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- added QItemSelectionModel variable.
+
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- added index spin box.
+	- implemented actions to select index.
+	- added list view and tree view for testing.
+
+	* configure.ac:
+	- added '--enable-gl' option.
+
+	* qt4/ball_item.cpp:
+	* qt4/edit_view.cpp:
+	* qt4/player_item.cpp:
+	- fixed rectangle size for setClipRect
+	- added USE_GLWIDGET support.
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- implemented move data operation.
+	- added right click event handler for table view.
+
+2009-04-23  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- implemented a data exchange operation.
+
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- implemented data selection events.
+
+	* qt4/Makefile.am:
+	- renamed build target.
+
+	* src/main_window.cpp:
+	* src/main_window.h:
+	- implemented toggle actions for tool bar and status bar.
+	- implemented splitter window.
+	- added QTableView and QStandardItemModel.
+
+	* src/edit_canvas.cpp:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/main_window.cpp:
+	- implemented data insert/replace/delete operations.
+	- implemented vertex select operation.
+
+2009-04-22  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* Makefile.am:
+	* qt4/Makefile.am:
+	* qt4/ball_item.cpp:
+	* qt4/edit_scene.cpp:
+	* qt4/player_item.cpp:
+	* qt4/triangulation_item.cpp:
+	* qt4/triangulation_item.h:
+	- enabled GraphicsView version again.
+	- renamed build target.
+	- added QPainter::setClipRect.
+
+	* src/edit_canvas.cpp:
+	* src/options.cpp:
+	- fixed selected player painting.
+	- disabled antialiasing by default.
+
+	* src/Makefile.am:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/edit_data.cpp:
+	* src/edit_data.h:
+	* src/edit_dialog.cpp:
+	* src/edit_dialog.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/mouse_state.h:
+	* src/options.cpp:
+	* src/options.h:
+	- added EditData class.
+	- implemented several data operatoins.
+
+	* src/Makefile.am:
+	* src/mouse_state.h:
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/mouse_state.h:
+	- implemented mouse events.
+	- implemented zoom operations
+
+2009-04-21  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* Makefile.am:
+	* configure.ac:
+	* src/Makefile.am:
+	* src/command.cpp:
+	* src/command.h:
+	* src/edit_canvas.cpp:
+	* src/edit_canvas.h:
+	* src/edit_dialog.cpp:
+	* src/edit_dialog.h:
+	* src/main.cpp:
+	* src/main_window.cpp:
+	* src/main_window.h:
+	* src/options.cpp:
+	* src/options.h:
+	- started to reimplement a painter based editor.
+
+	* qt4/edit_view.cpp:
+	- changed a viewport widget to QGLWidget.
+
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/player_item.cpp:
+	* qt4/player_item.h:
+	- reimplemented PlayerItem as a custum item.
+
+	* qt4/Makefile.am:
+	- renamed a built binary.
+
+2009-04-20  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* qt4/edit_view.cpp:
+	- added antialiasing switching.
+
+	* qt4/edit_scene.cpp:
+	* qt4/edit_view.cpp:
+	* qt4/edit_view.h:
+	- reimplemented background painting without graphics items.
+
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/edit_scene.cpp:
+	- reimplemented BallItem as a custum shape item.
+
+	* qt4/Makefile.am:
+	* qt4/triangulation_item.cpp:
+	* qt4/triangulation_item.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	- added TriangulationItem.
+
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/command.cpp:
+	* qt4/edit_dialog.cpp:
+	* qt4/edit_dialog.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	* qt4/options.cpp:
+	* qt4/options.h:
+	* qt4/player_item.cpp:
+	- implemented file open operations.
+
+2009-04-17  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/edit_dialog.cpp:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	- added open actions, but not implemented yet.
+
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/edit_view.cpp:
+	* qt4/edit_view.h:
+	* qt4/player_item.cpp:
+	- enabled all items to fix a mouse wheel scroll.
+
+2009-04-16  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/options.h:
+	* qt4/player_item.cpp:
+	* qt4/player_item.h:
+	- implemented a background player mode.
+
+	* qt4/ball_item.cpp:
+	* qt4/edit_dialog.cpp:
+	* qt4/edit_dialog.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/player_item.cpp:
+	- implemented a dialog reset button.
+	- implemented a right click action.
+
+	* qt4/player_item.cpp:
+	* qt4/Makefile.am:
+	* qt4/player_item.h:
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/command.cpp:
+	* qt4/command.h:
+	* qt4/edit_dialog.cpp:
+	* qt4/edit_dialog.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/edit_view.cpp:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	- added PlayerItem class.
+	- implemented a simple dialog update mechanism.
+
+	* qt4/Makefile.am:
+	* qt4/edit_dialog.cpp:
+	* qt4/edit_dialog.h:
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/command.cpp:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/edit_view.cpp:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	- added EditDialog class.
+	- added ball item moving signals/slots.
+
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	* qt4/options.h:
+	- added default z values for each object type.
+	- reimplemented moving object handling.
+
+	* qt4/ball_item.cpp:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/edit_view.cpp:
+	* qt4/edit_view.h:
+	* qt4/main_window.cpp:
+	- changed a signal sender for updating mouse position label from
+	EditScene to EditView.
+
+2009-04-15  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* qt4/Makefile.am:
+	* qt4/command.cpp:
+	* qt4/command.h:
+	* qt4/edit_scene.cpp:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	- started to use Qt4's undo framewrok.
+
+	* qt4/Makefile.am:
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/edit_view.cpp:
+	* qt4/edit_view.h:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	- implemented a hand scroll mode switch.
+
+	* qt4/Makefile.am:
+	* qt4/ball_item.cpp:
+	* qt4/ball_item.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/edit_view.cpp:
+	* qt4/edit_view.h:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	* qt4/options.cpp:
+	* qt4/options.h:
+	- added BallItem class.
+	- implemented enlarge mode.
+
+	* qt4/Makefile.am:
+	* qt4/edit_view.cpp:
+	* qt4/edit_view.h:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/main_window.cpp:
+	- added EditView class as a main graphics view object.
+
+	* qt4/Makefile.am:
+	* qt4/edit_scene.cpp:
+	* qt4/edit_scene.h:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	* qt4/options.cpp:
+	* qt4/options.h:
+	- added EditScene class as a main graphics scene object.
+
+2009-04-14  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	* Makefile.am:
+	* qt4/Makefile.am:
+	* qt4/main.cpp:
+	* qt4/main_window.cpp:
+	* qt4/main_window.h:
+	* qt4/options.cpp:
+	* qt4/options.h:
+	- started to implement a Qt4 version.
+
+	* m4/qt.m4:
+	- improved AX_QT4.
+
+2009-04-13  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	- added checking of librcsc_net and librcsc_time.
+
+	* qt3/fedit_canvas.cpp:
+	* qt3/fedit_canvas.h:
+	* qt3/fedit_data.cpp:
+	* qt3/fedit_dialog.cpp:
+	* qt3/fedit_dialog.h:
+	* qt3/formation_cdt.cpp:
+	- fixed typos.
+
+2009-04-10  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* rcsc/geom/cdt/half_edge.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	- replaced Vector2D::operator==() with Vector2D::equalsWeakly().
+
+2009-04-09  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	- added Triangulation::existIntersectionWithConstraint()
+	- cleaned up.
+
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/delaunay_tree.h:
+	* rcsc/geom/cdt/half_edge.cpp:
+	* rcsc/geom/cdt/half_edge.h:
+	* rcsc/geom/cdt/test_delaunay_tree.cpp:
+	* rcsc/geom/cdt/test_triangle.cpp:
+	* rcsc/geom/cdt/test_triangulation.cpp:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	- cleaned up.
+	- improved performance. changed some set containers to a vector
+	container.
+	- change the policy of HalfEdge constructor.
+
+	* rcsc/geom/cdt/Makefile.am:
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/test_line.cpp:
+	* rcsc/geom/cdt/half_edge.cpp:
+	* rcsc/geom/cdt/half_edge.h:
+	* rcsc/geom/cdt/test_triangle.cpp:
+	* rcsc/geom/cdt/test_triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	- replaced Line class with Segment2D class.
+	- removed line.{h,cpp} and test_line.cpp.
+
+2009-04-08  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* qt3/formation_cdt.cpp:
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/delaunay_tree.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	- improved Triangulation::findTriangleContains().
+
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/delaunay_tree.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	- reimplemented DelaunayTree::findTriangleContains().
+
+	* rcsc/geom/cdt/Makefile.am:
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/delaunay_tree.h:
+	* rcsc/geom/cdt/half_edge.cpp:
+	* rcsc/geom/cdt/test_triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	- cleaned up.
+	- fixed doxygen comments.
+
+	* configure.ac:
+	* Makefile.am:
+	* rcsc/geom/cdt/Makefile.am:
+	* rcsc/geom/cdt/test_delaunay_tree.cpp:
+	* rcsc/geom/cdt/test_line.cpp:
+	* rcsc/geom/cdt/test_triangle.cpp:
+	* rcsc/geom/cdt/test_triangulation.cpp:
+	- moved test code from 'test' to 'rcsc/geom/cdt'.
+
+	* rcsc/geom/cdt/half_edge.cpp:
+	* rcsc/geom/cdt/half_edge.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* test/triangle_test.cpp:
+	- changed arguments of HalfEdge constructor.
+	- renamed HalfEdge::line() to HalfEdge::segment().
+
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/half_edge.h:
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* test/line_test.cpp:
+	- removed Line::M_direction.
+	- added HalfEdge::direction().
+
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/half_edge.h:
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	* test/line_test.cpp:
+	* test/line_test.h:
+	* test/triangle_test.cpp:
+	- reimplemented some methods in Line class.
+
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* test/line_test.cpp:
+	* test/triangle_test.cpp:
+	- swapped argument order from Line(terminal,origin) to
+	Line(origin,terminal).
+
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	- cleaned up.
+
+2009-04-07  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangle.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	* test/Makefile.am:
+	* test/delaunay_triangulation_test.cpp:
+	* test/line_test.cpp:
+	* test/line_test.h:
+	* test/triangle_test.cpp:
+	- fixed coding style.
+	- replacing Line class with rcsc::Segment2D.
+
+2009-04-06  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	- added projection(Vector2D).
+
+	* qt3/cdt-normal-formation-2.conf:
+	* qt3/cdt-normal-formation-2.dat:
+	* qt3/cdt-normal-formation.conf:
+	* qt3/cdt-normal-formation.dat:
+	* qt3/normal-formation.conf:
+	* qt3/normal-formation.dat:
+	- added test data.
+
+	* configure.ac:
+	- removed checking of boost.test.
+
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/half_edge.cpp:
+	* rcsc/geom/cdt/half_edge.h:
+	* rcsc/geom/cdt/line.cpp:
+	* rcsc/geom/cdt/line.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangle.h:
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	* rcsc/geom/cdt/vertex.h:
+	* test/delaunay_tree_test.cpp:
+	* test/delaunay_triangulation_test.cpp:
+	* test/line_test.cpp:
+	* test/triangle_test.cpp:
+	- cleaned up.
+	- fixed coding style.
+
+2009-04-03  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* rcsc/geom/cdt/triangulation.cpp:
+	* rcsc/geom/cdt/triangulation.h:
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.cpp:
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.h:
+	* qt3/fedit_data.cpp:
+	* qt3/fedit_data.h:
+	* qt3/formation_cdt.h:
+	* rcsc/geom/cdt/Makefile.am:
+	* test/delaunay_triangulation_test.cpp:
+	* test/delaunay_triangulation_test.h:
+	- renamed CDT to Triangulation.
+	- supported the changes of librcsc.
+
+2009-03-16  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* m4/cppunit.m4:
+	* Makefile.am:
+	* configure.ac:
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.cpp:
+	* test/Makefile.am:
+	* test/delaunay_tree_test.cpp:
+	* test/delaunay_tree_test.h:
+	* test/delaunay_triangulation_test.cpp:
+	* test/delaunay_triangulation_test.h:
+	* test/line_test.cpp:
+	* test/line_test.h:
+	* test/main.cpp:
+	* test/point_test.cpp:
+	* test/point_test.h:
+	* test/triangle_test.cpp:
+	* test/triangle_test.h:
+	- reimplemented test code using cppunit.
+
+2009-03-13  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.cpp:
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.h:
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/delaunay_tree.h:
+	- fixed coding style.
+
+2009-03-10  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	* qt3/fedit_canvas.cpp:
+	* qt3/fedit_data.cpp:
+	* qt3/fedit_data.h:
+	* qt3/formation_cdt.cpp:
+	* qt3/formation_cdt.h:
+	* qt3/main_window.cpp:
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.cpp:
+	* rcsc/geom/cdt/constrained_delaunay_triangulation.h:
+	* rcsc/geom/cdt/delaunay_tree.cpp:
+	* rcsc/geom/cdt/delaunay_tree.h:
+	* rcsc/geom/cdt/triangle.cpp:
+	* rcsc/geom/cdt/triangle.h:
+	- simple working version.
+
+2009-03-07  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* m4/qt.m4:
+	* qt3:
+	* qt3/Makefile.am:
+	* qt3/fedit_canvas.cpp:
+	* qt3/fedit_canvas.h:
+	* qt3/fedit_config.cpp:
+	* qt3/fedit_config.h:
+	* qt3/fedit_data.cpp:
+	* qt3/fedit_data.h:
+	* qt3/fedit_dialog.cpp:
+	* qt3/fedit_dialog.h:
+	* qt3/main.cpp:
+	* qt3/main_window.cpp:
+	* qt3/main_window.h:
+	* qt3/mouse_state.h:
+	* xpm:
+	* xpm/chase.xpm:
+	* xpm/delete.xpm:
+	* xpm/hand.xpm:
+	* xpm/insert.xpm:
+	* xpm/new.xpm:
+	* xpm/open.xpm:
+	* xpm/record.xpm:
+	* xpm/replace.xpm:
+	* xpm/reverse.xpm:
+	* xpm/save.xpm:
+	* xpm/soccerwindow2-nostr.xpm:
+	* xpm/soccerwindow2.xpm:
+	* xpm/symmetry.xpm:
+	* xpm/train.xpm:
+	* Makefile.am:
+	* configure.ac:
+	- added fedit-qt3 sources.
+
+2009-03-05  Hidehisa Akiyama  <akky@users.sourceforge.jp>
+
+	* configure.ac:
+	- created new source package.

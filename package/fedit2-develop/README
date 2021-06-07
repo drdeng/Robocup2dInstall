@@ -1,0 +1,103 @@
+============
+はじめに
+============
+fedit2はRoboCupサッカーシミュレーションのためのフォーメーションエディ
+タです．
+
+- RoboCup Soccer Simulator Homepage: http://sserver.sf.net/
+- RoboCup Official Homepage: http://www.robocup.org/
+
+- fedit2 Homepage: http://rctools.sourceforge.jp/
+
+==========
+REFERENCES
+==========
+論文等での参照先としては以下をご利用ください．
+
+Hidehisa Akiyama, Tomoharu Nakashima, HELIOS Base: An Open Source
+Package for the RoboCup Soccer 2D Simulation, In Sven Behnke, Manuela
+Veloso, Arnoud Visser, and Rong Xiong editors, RoboCup2013: Robot
+World XVII, Lecture Notes in Artificial Intelligence, Springer Verlag,
+Berlin, 2014.
+
+@inbook{akiyama2014,
+  author="Hidehisa AKIYAMA and Tomoharu NAKASHIMA",
+  editor="Sven Behnke and Manuela Veloso and Arnoud Visser and Rong Xiong",
+  title="HELIOS Base: An Open Source Package for the RoboCup Soccer 2D Simulation",
+  booktitle="RoboCup 2013: Robot World Cup XVII",
+  series="Lecture Notes in Artificial Intelligence",
+  year="2014",
+  publisher="Springer",
+  address="Berlin",
+  pages="528--535",
+  isbn="978-3-662-44468-9",
+  doi="10.1007/978-3-662-44468-9_46",
+  url="http://dx.doi.org/10.1007/978-3-662-44468-9_46"
+}
+
+============
+要求ライブラリ
+============
+fedit2-0.0.0 は以下のライブラリを要求します:
+ - Qt-4.3 or later
+ - boost-1.32 or later
+ - librcsc-4.0.x
+
+fedit2のインストールを始める前に，これらのライブラリを先にインストール
+しておいてください．
+
+==========
+インストール
+==========
+パッケージを展開したディレクトリ内部で以下のコマンドを実行します:
+
+./configure
+make
+su
+make install
+
+この手順によって必要なバイナリが生成され，それらは'/usr/local'以下へイ
+ンストールされます．'/usr/local/bin/fedit2'が実行ファイルです．
+
+librcscをシステムのディレクトリにインストールしていない場合，以下のよ
+うにconfigureの'--with-librcsc'オプションによってlibrcscのインストール
+パスを指定しなければなりません．
+
+./configure --with-librcsc=/path/to/librcsc/prefix
+
+この場合，環境変数 LD_LIBRARY_PATH も設定する必要があるかもしれません．
+
+=================
+インストール時の設定
+=================
+fedit2をビルドする前に，パッケージに含まれるconfigureスクリプト
+のオプションによって設定を変更することができます．
+
+デフォルトの設定では，fedit2は以下の場所へインストールされます．
+
+/usr/local/bin        実行ファイル
+
+/usr/local/share      データ
+
+デフォルト位置へfedit2をインストールするためには管理者権限が必要になり
+ます．インストール場所はconfigureスクリプトの'--prefix'オプションによっ
+て変更できます．configureで指定できるオプションの詳細は，'configure
+--help'を実行することで参照できます．
+
+=============
+アンインストール
+=============
+パッケージをコンパイルしたディレクトリで 'make uninstall'を実行するだ
+けでfedit2を簡単にアンインストールできます．この操作はインストールされ
+たすべてのファイルを削除しますが，インストール時に作成されたディレクト
+リは削除されません．
+
+=======
+使用方法
+=======
+fedit2を実行するには，以下のコマンドを実行します．
+
+`fedit2'
+
+ただし，この場合，実行ファイルが環境変数PATHに含まれるディレクトリに存
+在しなければなりません．

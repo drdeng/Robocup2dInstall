@@ -1,0 +1,113 @@
+============
+INTRODUCTION
+============
+The soccerwindow2 is a visualization tool for the RoboCup Soccer
+Simulator.
+
+- RoboCup Soccer Simulator Homepage: http://sserver.sf.net/
+- RoboCup Official Homepage: http://www.robocup.org/
+
+- soccerwindow2 Homepage: http://rctools.sourceforge.jp/
+
+==========
+REFERENCES
+==========
+If you use soccerwindow2 in your scientific work, please cite as:
+
+Hidehisa Akiyama, Tomoharu Nakashima, HELIOS Base: An Open Source
+Package for the RoboCup Soccer 2D Simulation, In Sven Behnke, Manuela
+Veloso, Arnoud Visser, and Rong Xiong editors, RoboCup2013: Robot
+World XVII, Lecture Notes in Artificial Intelligence, Springer Verlag,
+Berlin, 2014.
+
+@inbook{akiyama2014,
+  author="Hidehisa AKIYAMA and Tomoharu NAKASHIMA",
+  editor="Sven Behnke and Manuela Veloso and Arnoud Visser and Rong Xiong",
+  title="HELIOS Base: An Open Source Package for the RoboCup Soccer 2D Simulation",
+  booktitle="RoboCup 2013: Robot World Cup XVII",
+  series="Lecture Notes in Artificial Intelligence",
+  year="2014",
+  publisher="Springer",
+  address="Berlin",
+  pages="528--535",
+  isbn="978-3-662-44468-9",
+  doi="10.1007/978-3-662-44468-9_46",
+  url="http://dx.doi.org/10.1007/978-3-662-44468-9_46"
+}
+
+===========
+REQUIREMENT
+===========
+The soccerwindow2-5.0.0 requires the following libraries:
+ - Qt-3.3.x, Qt-4.3 or later
+ - boost-1.32 or later
+ - librcsc-4.0.x
+
+Please install them first before you start the installation of
+soccerwindow2.
+
+=======
+INSTALL
+=======
+From the soccerwindow2 directory execute:
+
+./configure
+make
+su
+make install
+
+This will built the neccesary binaries and install them under
+'/usr/local'.
+''/usr/local/bin/soccerwindow2' is the wrapper script for the viewer
+program. '/usr/local/bin/sswindow2' is the sample start script to
+invoke the soccerwindow2 as a soccer monitor. These two files will be
+put into '/usr/local/bin'.
+'soccerwindow2/xpm/soccerwindow2.xpm' is the official icon image
+and this will be put into '/usr/local/share/soccerwindow2'.
+
+If you did not install the librcsc into the system directory, you will
+need to set the configure's `--with-librcsc=DIR' option as follows:
+
+./configure --with-librcsc=/path/to/librcsc/prefix
+
+In this case, you may also need to set the environment variable
+LD_LIBRARY_PATH.
+
+===========
+CONFIGURING
+===========
+Before you build the soccerwindow2, you must run the `configure'
+script located in the root of the distribution directory.
+
+The default configuration will set up to install the soccerwindow2
+components in the following location.
+
+/usr/local/bin        for the executables
+
+You may need administrator privilages to install the soccerwindow2
+into the default location.  This locations can be modified by using
+configure's `--prefix=DIR' and related options.  See `configure
+--help' for more details.
+
+========
+UNINSTAL
+========
+The soccerwindow2 can also be easily removed by entering the
+distribution directory and running `make uninstall'.  This will remove
+all the files that where installed, but not any directories that were
+created during the installation process.
+
+=======================
+USING THE SOCCERWINDOW2
+=======================
+To start the soccerwindow2 type
+
+`soccerwindow2'
+
+if you installed the executables in your PATH. soccerwindow2 will look
+in your home directory for the configuration files:
+
+`.soccerwindow2-qt3.rc'  or  '.soccerwindow2-qt4'
+
+If this file does not exist, this will be created and populated with
+default values.

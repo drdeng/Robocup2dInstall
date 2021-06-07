@@ -1,0 +1,58 @@
+
+* XPMのフォーマット
+
+static char *<variable_name>[] = [
+   <Value>,
+   <Colors>,
+   <Pixels>,
+   <Extensions>
+};
+
+
+** <Values> セクション
+4個または6個の10進数整数を含む文字列
+
+ "<width> <height> <ncolors> <cpp> [<x_hotspot> <y_hotspot>] [XPMEXT]"
+
+幅，高さ，色数，ピクセルあたりの文字数
+hotspotの座標，拡張が存在する場合はXPMEXTタグ
+
+<cpp> = <chars_per_pixel>
+
+
+** <Colors> セクション
+
+色指定のための文字列．
+指定した色数に応じて文字列長は長くなる．
+一つの色は以下のフォーマットで表される．
+
+  <chars> {<key> <color>}+
+
+一文字列が一つの色を表すので，<Values>セクションで指定した色数分と同じ
+数の文字列を与えなければならない．
+
+
+<chars>:
+<chars_per_pixel>の長さの文字列（引用符では囲まれない）で、ピ
+クセルを表す（256色なら<cpp>=1なので，一文字でOK）．
+
+<color>:
+色の名前，または，#で始まる16進RGB文字列
+
+<key>:
+この色が使用されるコンテキストを示すキーワード．以下のいずれか:
+  m: モノクロ
+  s: シンボリックネーム
+  g4: 4レベルグレースケール
+  g: 4レベルより上のグレースケール
+  c: 表示色
+
+
+** <Pixels> セクション
+
+<width>*<chars_per_pixe.>の長さの文字列を<height>個
+
+
+** <Extensions> セクション
+
+省略

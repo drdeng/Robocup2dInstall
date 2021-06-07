@@ -1,0 +1,116 @@
+============
+はじめに
+============
+soccerwindow2はRoboCup Soccer Simulatorのためのビューワプログラムです．
+
+- RoboCup Soccer Simulator Homepage: http://sserver.sf.net/
+- RoboCup Official Homepage: http://www.robocup.org/
+
+- soccerwindow2 Homepage: http://rctools.sourceforge.jp/
+
+==========
+REFERENCES
+==========
+論文等での参照先としては以下をご利用ください．
+
+Hidehisa Akiyama, Tomoharu Nakashima, HELIOS Base: An Open Source
+Package for the RoboCup Soccer 2D Simulation, In Sven Behnke, Manuela
+Veloso, Arnoud Visser, and Rong Xiong editors, RoboCup2013: Robot
+World XVII, Lecture Notes in Artificial Intelligence, Springer Verlag,
+Berlin, 2014.
+
+@inbook{akiyama2014,
+  author="Hidehisa AKIYAMA and Tomoharu NAKASHIMA",
+  editor="Sven Behnke and Manuela Veloso and Arnoud Visser and Rong Xiong",
+  title="HELIOS Base: An Open Source Package for the RoboCup Soccer 2D Simulation",
+  booktitle="RoboCup 2013: Robot World Cup XVII",
+  series="Lecture Notes in Artificial Intelligence",
+  year="2014",
+  publisher="Springer",
+  address="Berlin",
+  pages="528--535",
+  isbn="978-3-662-44468-9",
+  doi="10.1007/978-3-662-44468-9_46",
+  url="http://dx.doi.org/10.1007/978-3-662-44468-9_46"
+}
+
+============
+要求ライブラリ
+============
+soccerwindow2-5.0.0 は以下のライブラリを要求します:
+ - Qt-3.3.x, Qt-4.3 or later
+ - boost-1.32 or later
+ - librcsc-4.0.x
+
+soccerwindow2のインストールを始める前に，これらのライブラリを先にイン
+ストールしておいてください．
+
+==========
+インストール
+==========
+パッケージを展開したディレクトリ内部で以下のコマンドを実行します:
+
+./configure
+make
+su
+make install
+
+この手順によって必要なバイナリが生成され，それらは'/usr/local'以下へイ
+ンストールされます．'/usr/local/bin/soccerwindow2'はビューワを起動する
+ためのラッパースクリプトです．'/usr/local/bin/sswindow2'はシンプルな起
+動スクリプトで，soccerwindow2をサッカーモニタとして起動するために使用
+します．'/usr/share/soccerwindow2/soccerwindow2.xpm'は公式のアイコンイ
+メージです．
+
+librcscをシステムのディレクトリにインストールしていない場合，以下のよ
+うにconfigureの'--with-librcsc'オプションによってlibrcscのインストール
+パスを指定しなければなりません．
+
+./configure --with-librcsc=/path/to/librcsc/prefix
+
+この場合，環境変数 LD_LIBRARY_PATH も設定する必要があるかもしれません．
+
+=================
+インストール時の設定
+=================
+soccerwindow2をビルドする前に，パッケージに含まれるconfigureスクリプト
+のオプションによって設定を変更することができます．
+
+デフォルトの設定では，soccerwindow2は以下の場所へインストールされます．
+
+/usr/local/bin        実行ファイル
+
+/usr/local/share      データ
+
+デフォルト位置へsoccerwindow2をインストールするためには管理者権限が必
+要になります．インストール場所はconfigureスクリプトの'--prefix'オプショ
+ンによって変更できます．また，Qt4バージョンのsoccerwindow2を利用したい
+場合は，'configure --disable-qt3 --enable-qt4'を実行します．configure
+で指定できるオプションの詳細は，'configure --help'を実行することで参照
+できます．
+
+=============
+アンインストール
+=============
+パッケージをコンパイルしたディレクトリで 'make uninstall'を実行するだ
+けでsoccerwindow2を簡単にアンインストールできます．この操作はインストー
+ルされたすべてのファイルを削除しますが，インストール時に作成されたディ
+レクトリは削除されません．また，以下で述べる設定ファイル
+(~/.soccerwindow2-qt3.rc または ~/.soccerwindow2-qt4)も削除されません．
+ディレクトリや設定ファイルは手動で削除してください．
+
+=======
+使用方法
+=======
+soccerwindow2を実行するには，以下のコマンドを実行します．
+
+`soccerwindow2'
+
+ただし，この場合，実行可能ファイルが環境変数PATHに含まれるディレクトリ
+に存在しなければなりません．soccerwindow2はユーザのホームディレクトリ
+で以下の設定ファイルを探します．
+
+`.soccerwindow2-qt3.rc'  または  '.soccerwindow2-qt4'
+
+これらのファイルが存在しない場合，デフォルト値で設定されたファイルが自
+動的に生成されます．

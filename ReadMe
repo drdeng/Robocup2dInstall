@@ -1,0 +1,4 @@
+##Robocup sim 2d  平台安装
+快速安装：
+wget -qO- https://raw.githubusercontent.com/drdeng/Robocup2dInstall/master/setup.sh | sh -x
+

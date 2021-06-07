@@ -1,0 +1,197 @@
+[5.1.0]
+ * Qt3のソースを配布パッケージから削除した．今後，Qt3バージョンはサポー
+   トされない．
+
+ * コーチのデバッグクライアント接続，デバッグログ読み込みに対応した．
+
+[5.0.0]
+ * rcssserverバージョン14に対応し，librcsc-4.0.xを要求するようになった．
+
+ * ファウル，カード状態，キャッチ可能エリアの描画をサポートした
+
+ * rcssserverのdiscardコマンドをサポートした．人間審判によって，イエロー
+   カード/レッドカードを与えられるようになった．
+
+ * マウスメジャー機能が拡張された．
+   - ボールの初速を設定ダイアログで指定できるようになった
+   - 選択したプレイヤの移動可能範囲を表示できるようになった．このモー
+     ドでは，プレイヤが静止状態からmax_dash_powerで前方へ走り続けた場
+     合の累計移動距離がステップごとに描画される．
+
+ * OpenGLレンダリングをデフォルトで無効にした．
+
+ * Qt3バージョンがobsoleteとなった．feditはfedit2として再設計され，別
+   パッケージで管理されるようになった．今後，Qt3バージョンのソースはメ
+   ンテナンスされない．Qt3に依存するソースコードは，次期マイナーアップ
+   デートから配布物に含まれなくなる予定である．
+
+ * デバッグレベル文字列がいくつか変更された．古いバージョンからアップ
+   デートする場合，~/.soccerwindow2-qt4を一旦削除することが推奨される．
+
+[4.1.1]
+  * gcc-4.4でのコンパイルの不具合を修正した．
+
+[4.1.0]
+  * Qt4バージョンがデフォルトで使用されるようになった．
+
+  * Qt4バージョンでOpenGLレンダリングが有効化された．環境によっては高
+    速描画が期待できる．逆に遅くなってしまう場合は，configure時
+    に'--disable-gl'オプションを指定し，通常描画モードでビルドすること
+    が推奨される．
+
+  * attentiontoの状態を描画できるようになった．
+
+  * ペナルティキックのスコア表示のバグが修正された．
+
+  * コミュニケーションのデバッグ情報描画がサポートされた．
+
+  * デバッグログの図形塗りつぶしがサポートされた．
+
+  * デバッグメッセージウインドウに読み込んだデータをすべて消去するボタ
+    ンを追加．
+
+  * fedit: フォーメーション設定ファイルフォーマットが変更された．.conf
+    ファイルと.datファイルは統合され，.confファイルのみを扱うようになっ
+    た．
+
+  * fedit: 二つのフォーメーションデータの読み込みがサポートされた．二
+    つ目に開かれた.confファイルは編集できないが，その内容は背景として
+    描画される．
+
+[4.0.1]
+  * Qt4バージョンにおけるショートカットキーの不具合を修正した．
+
+[4.0.0]
+  * librcsc-3.0.xをサポートした．
+
+  * ゲームログバージョン5，モニタプロトコルバージョン4をサポートした．
+
+  * スタミナキャパシティ情報の描画をサポートした．
+
+  * シンプルなトレーナクライアントインタフェースを追加した．rcssserver
+  がトレーナモードで実行されていれば，soccerwindow2からプレイモードを
+  変更することが可能となった．
+
+  * '--show-pointto'オプションを追加した．
+
+  * msginfoのパース処理の不具合を修正した．
+
+  * いくつかの環境でのコンパイルの問題を修正した．
+
+[3.0.1]
+  * Fixed gcc-4.3 build problems.
+
+[3.0.0]
+  * Supported the monitor protocol version 3 and the log format
+    version 4.
+
+  * Supported a team_graphic protocl.
+
+  * Supported a Windows environment.
+
+  * Implemented a tabbed dialog for the view preference dialog.
+
+  * Added a move dialog that enables us to change the location of all
+    objects. Furthermore, users can move players by the mouse drag
+    operation.
+
+  * Added a rcssmonitor style.
+
+  * Added a grid paiting option.
+
+  * Improved the performance of Qt4 painting.
+
+  * Added options to enable an automatic image saving procedure.
+
+  * Supported a symmetric movement in fedit.
+
+[2.1.0]
+  * Added command line options, '--host', '--reverse-side',
+	'--player-reverse-draw' and '--anonymous-mode'
+
+  * Implemented the scoreboard for the penalty shootouts.
+
+  * Supported anonymous mode in soccerwindow2.
+
+  * Supported reverse draw in soccerwindow2.
+
+  * Supported zoom in/out and focus change in fedit.
+
+  * Added command line options, '--conf' and '--data', to fedit to
+	specify the configuration files.
+
+  * Implemented a mouse drag focus.
+
+  * Added a simple launcher dialog.
+
+  * removed wx version.
+
+  * Qt3 version only: supported graphic object in the player's debug
+    log files. See the documentation of librcsc.
+
+  * added a launcher dialog.
+
+  * added new options '--hide-menu-bar' and '--anonymous-mode'.
+
+[2.0.1]
+  * Fixed build problem in fedit-wx.
+
+[2.0.0]
+  * Qt3 and Qt4 are supported. But, Qt4 version is still in a test
+  phase. The default build target is Qt3 version and wxGTK version
+  will not be supported in the future.
+
+  * Supported MacOSX in both Qt version.
+
+  * Supported 64-bits OS.
+
+  * wxGTK version requires boost::signals library.
+
+  * Supported a Delaunay Triangulation formation.
+
+  * Now, soccerwindow2 can save the rcg file from memory data. This
+  means that it is not necessary for rcssserver to record a game log
+  pfile when soccerwindow2 is used as a monitor client.
+
+  * Now, soccerwindow2 can save and load the client's online debug
+  messages.
+
+[1.2.0]
+  * Now, boost::program_options is not required.
+
+  * added GUI controls  to change the auto trace range.
+
+  * supported keepaway mode.
+
+  * added ball travel marks on the mouse measure line.
+
+  * added '--replay-speed-ratio' option to control the logplayer's
+	replay speed..
+
+  * The Formation Editor is split from soccerwindow2 binary. A new
+	binary, fedit, will be built and installed.
+
+  * libraries related to the formation are moved to librcsc.
+
+[1.1.1]
+  * fixed a compilation problem on some platform. This problem is
+	caused by the type mismatch between char and rcsc::PlayMode.
+
+[1.1.0]
+  * Added a new formationn construction method using the delaunay triangulation.
+
+  * Added 'kill server' menu.
+
+  * added new drawable object types, triangle, rect and circle in the
+    debug server.
+
+  * added --auto-quit-mode command line option.
+
+  * added 'Replace' button to the formation editor.
+
+  * The data structure of formation system is totally changed.
+
+  * Now, we can invoke the custimized rcssserver with the command line
+    options of soccerwindow2 as follows:
+
+    $ soccerwindow2 --server-path $HOME/bin/rcssserver-mine

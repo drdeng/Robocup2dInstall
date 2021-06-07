@@ -1,0 +1,46 @@
+[5.1.0]
+  * Supported a coach debug client and debug log.
+
+[5.0.0]
+  * Supported rcssserver-14 and required librcsc-4.0.x.
+
+[4.1.1]
+  * Fixed a build problem with gcc-4.4.
+
+[4.1.0]
+  * Now, Qt4 version is used by default.
+
+  * Enabled OpenGL rendering in Qt4 version.
+
+  * Fixed a bug of the penalty kick score board.
+
+  * Supporeted attentionto information.
+
+  * Supported say and hear information in debug server data.
+
+  * Supported rendering of filled shape in debug log data.
+
+  * fedit: changed the format of formation configuration file.
+
+  * fedit: supported background data.
+
+[4.0.1]
+  * Fixed a defect of shortcut keys in Qt4 version.
+
+[4.0.0]
+  * Supported librcsc-3.0.x.
+
+  * Supported the game log version 5 and the monitor protocol version
+    4.
+
+  * Supported stamina capacity information painting.
+
+  * Implemented simple trainer client interfaces. Now, users can
+    change playmode using soccerwindow2 if rcssserver is running on
+    the trainer mode.
+
+  * Added '--show-pointto' option.
+
+  * Fixed a defect of msginfo parsing.
+
+  * Fixed compilation problems on some platforms.

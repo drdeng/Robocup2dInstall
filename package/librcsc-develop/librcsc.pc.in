@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE@
+Description: a base library for developing a RoboCup soccer simulation client
+Version: @VERSION@
+Libs: -L${libdir} -lrcsc -lz -lm
+Cflags: -I${includedir}

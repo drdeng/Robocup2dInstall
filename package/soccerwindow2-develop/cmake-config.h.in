@@ -1,0 +1,7 @@
+
+
+#define PACKAGE_NAME "soccerwindow2"
+
+#define VERSION @soccerwindow2_VERSION@
+
+#cmakedefine HAVE_LIBZ

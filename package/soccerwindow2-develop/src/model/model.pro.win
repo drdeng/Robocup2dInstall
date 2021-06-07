@@ -1,0 +1,42 @@
+
+TEMPLATE = lib
+TARGET = soccerwindow2_model
+DESTDIR = ../lib
+DEPENDPATH += . ../rcsc
+INCLUDEPATH += . .. ../boost_1_34_1
+LIBS +=
+DEFINES += HAVE_WINDOWS_H HAVE_LIBRCSC_GZ
+CONFIG += staticlib warn_on release
+#QMAKE_LFLAGS_DEBUG += -static
+#QMAKE_LFLAGS_DEBUG += -pg
+#QMAKE_CFLAGS_DEBUG += -pg -static -DQABSTRACTSOCKET_DEBUG
+#QMAKE_CXXFLAGS_DEBUG += -pg -static -DQABSTRACTSOCKET_DEBUG
+
+# Input
+HEADERS += \
+app_config.h \
+ball.h \
+debug_client_parser.h \
+debug_log_data.h \
+debug_log_holder.h \
+debug_view_data.h \
+main_data.h \
+monitor_view_data.h \
+player.h \
+team.h \
+view_config.h \
+view_holder.h
+
+SOURCES += \
+app_config.cpp \
+ball.cpp \
+debug_client_parser.cpp \
+debug_log_data.cpp \
+debug_log_holder.cpp \
+debug_view_data.cpp \
+main_data.cpp \
+monitor_view_data.cpp \
+player.cpp \
+team.cpp \
+view_config.cpp \
+view_holder.cpp
